@@ -1,6 +1,6 @@
 pipeline {
     
-agent { node { label 'Node_agent' } } 
+agent { node { label 'master' } } 
 
 stages {
    stage('Read demo file') {
