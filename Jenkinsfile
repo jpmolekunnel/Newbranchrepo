@@ -1,9 +1,9 @@
 pipeline {
-    
-agent { node { label 'master' } } 
+   
+agent { node { label 'master' } }
 parameters {
         string(name: 'FileName', defaultValue: '', description: 'Pls supply filename')
-        choice(name: 'FileList', choices: ['demo', 'ajay'], description: 'Pick File')
+        choice(name: 'FileList', choices: ['demo', 'world'], description: 'Pick File')
  }
 stages {
    stage('Read demo file') {
@@ -21,7 +21,7 @@ stages {
                sh "cat ${params.FileList}.txt"
             }
         }
-
+ 
 }
-
+ 
 }
